@@ -1,0 +1,23 @@
+.tip-button {
+  background-color: var(--very-dark-cyan);
+  color: white;
+  padding: 0.5em;
+}
+
+.tip-button-active {
+  background-color: var(--primary);
+  color: var(--very-dark-cyan);
+}
+
+.tip-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0.5rem;
+}
+
+.input-text {
+  padding: 0.5em;
+  color: var(--very-dark-cyan);
+  text-align: center;
+}
