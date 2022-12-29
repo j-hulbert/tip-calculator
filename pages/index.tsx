@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import TipButtonGroup from "../components/ButtonGroup";
 import { useRouter } from "next/router";
 
@@ -9,12 +9,12 @@ export default function Home() {
   const [people, setPeople] = useState("2");
   const router = useRouter();
 
-  const handleSetTip = (tipSelection) => {
+  const handleSetTip = (tipSelection: string) => {
     const tipVal = parseFloat(tipSelection.replace("%", ""));
     setTip(tipVal);
   };
 
-  const handleSetBill = (e) => {
+  const handleSetBill = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBill(e.target.value);
   };
 

@@ -10,16 +10,19 @@ const ButtonGroup = ({ buttons, doSomethingAfterClick }: ButtonGroupProps) => {
   const [clickedId, setClickedId] = useState(0);
   const [customTip, setCustomTip] = useState("");
 
-  const handleClick = (e, id) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>, id: number) => {
     setClickedId(id);
     setCustomTip("");
-    doSomethingAfterClick(e.target.innerHTML);
+    const target = e.target as HTMLButtonElement;
+    doSomethingAfterClick(target.innerHTML);
   };
 
-  const handleCustomTip = (e) => {
+  const handleCustomTip = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCustomTip(e.target.value);
     if (e.target.value) {
       setClickedId(-1);
+    } else {
+      setClickedId(0);
     }
     doSomethingAfterClick(e.target.value);
   };
