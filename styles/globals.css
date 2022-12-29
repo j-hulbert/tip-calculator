@@ -16,9 +16,10 @@
 
 html {
   background-color: var(--light-grayish-cyan);
+  font-family: "Space Mono";
   font-weight: 700;
   line-height: 1.15;
-  font-size: 24px;
+  font-size: 1.5rem;
   text-align: center;
   min-width: 100vh;
   height: 100vh;
@@ -49,12 +50,16 @@ main {
 
 h1 {
   text-transform: uppercase;
+  width: 5ch;
   margin: 2rem;
+  overflow-wrap: break-word;
+  font-size: 1rem;
 }
 
-h2 {
+label {
   font-size: 0.6rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
+  display: inline-block;
 }
 
 input {

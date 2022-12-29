@@ -40,23 +40,25 @@ export default function Home() {
           <div className={styles["inner-container"]}>
             <div className={styles["left-side"]}>
               <div>
-                <h2>Bill</h2>
+                <label htmlFor="bill">Bill</label>
                 <input
                   id="bill"
+                  name="bill"
                   className={styles["input-text"]}
                   type="text"
                   value={bill}
                   onChange={handleSetBill}
                 />
               </div>
-              <h2>Select Tip %</h2>
+              <label htmlFor="tip_pct">Select Tip %</label>
               <TipButtonGroup
                 buttons={["5%", "10%", "15%", "25%", "50%"]}
                 doSomethingAfterClick={handleSetTip}
               />
               <div>
-                <h2>Number of People</h2>
+                <label htmlFor="people">Number of People</label>
                 <input
+                  name="people"
                   className={styles["input-text"]}
                   type="text"
                   value={people}

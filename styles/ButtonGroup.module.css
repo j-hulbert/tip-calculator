@@ -1,7 +1,8 @@
 .tip-button {
   background-color: var(--very-dark-cyan);
   color: white;
-  padding: 0.5em;
+  text-align: center;
+  padding: 0.25em;
 }
 
 .tip-button-active {
@@ -11,13 +12,12 @@
 
 .tip-container {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 0.5rem;
 }
 
 .input-text {
-  padding: 0.5em;
   color: var(--very-dark-cyan);
   text-align: center;
 }
